@@ -1,5 +1,6 @@
 // import { useLocation } from "react-router-dom";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import { useDetails } from "../../context/productContext";
 import {
   NavContainer,
   ContentContainer,
@@ -8,8 +9,11 @@ import {
   SmNavMenu,
   LinkItem,
 } from "./styledComponent";
+import "./index.css";
 const Header = () => {
-  //const location = useLocation();
+  // const location = useLocation();
+  const data = useDetails();
+  const count = data.cartList.length > 0 ? data.cartList.length : 0;
   return (
     <NavContainer>
       <ContentContainer>
@@ -25,6 +29,7 @@ const Header = () => {
           <LinkItem to="/cart">
             cart
             <AiOutlineShoppingCart height="40" width="40" color="#000000" />
+            <p className="count">{count}</p>
           </LinkItem>
         </LgNavMenu>
         <SmNavMenu>
@@ -33,6 +38,7 @@ const Header = () => {
           <LinkItem to="/cart">
             cart
             <AiOutlineShoppingCart height="30" width="30" color="#000000" />
+            <p className="count">{count}</p>
           </LinkItem>
         </SmNavMenu>
       </ContentContainer>

@@ -3,7 +3,6 @@ import Header from "../Header";
 import Loader from "react-loader-spinner";
 import { v4 } from "uuid";
 import { Link } from "react-router-dom";
-import { useDetails } from "../../context/productContext";
 import { LoaderContainer, BrandsEl, ContentEl } from "./styledComponents";
 import "./index.css";
 
@@ -19,8 +18,6 @@ const Brands = () => {
     apiStatus: apiStatusConstance.initial,
     data: [],
   });
-  const data = useDetails();
-  data.setProductsData(productsData.data);
   useEffect(() => {
     const fetchUrl = async () => {
       setProductsData({ apiStatus: apiStatusConstance.loading });

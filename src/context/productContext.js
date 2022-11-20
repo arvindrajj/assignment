@@ -1,9 +1,13 @@
 import { createContext, useContext } from "react";
-const productContext = createContext({
-  productsData: [],
-  setProductsData: () => {},
+const productCartContext = createContext({
+  cartList: [],
+  removeAllCartItems: () => {},
+  addCartItem: () => {},
+  removeCartItem: () => {},
+  incrementCartItemQuantity: () => {},
+  decrementCartItemQuantity: () => {},
 });
 
-export const useDetails = () => useContext(productContext);
+export const useDetails = () => useContext(productCartContext);
 
-export default productContext;
+export default productCartContext;
