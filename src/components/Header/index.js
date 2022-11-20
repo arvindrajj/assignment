@@ -17,7 +17,7 @@ const Header = () => {
   return (
     <NavContainer>
       <ContentContainer>
-        <LinkItem>
+        <LinkItem to="/">
           <WebsiteLogo
             src="https://www.logolynx.com/images/logolynx/a6/a671ef222a6e136f8fe7fd9cfc97e57b.png"
             alt="eCommerce"

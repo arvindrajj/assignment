@@ -1,14 +1,28 @@
-import { useState } from "react";
-import { Routes, Route } from "react-router-dom";
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useState, useEffect } from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Home from "./components/Home";
 import Brands from "./components/Brands";
 import ProductItem from "./components/ProductItem";
 import Cart from "./components/CartReview";
 import productCartContext from "./context/productContext";
+import BadPath from "./components/BadPath";
 import "./App.css";
 
 const App = () => {
   const [cartList, setCartList] = useState([]);
+
+  useEffect(() => {
+    const items = JSON.parse(localStorage.getItem("cartItems"));
+    const cartListItems = items === null ? [] : items;
+    setCartList(cartListItems);
+  }, []);
+
+  useEffect(() => {
+    if (cartList.length !== 0) {
+      localStorage.setItem("cartItems", JSON.stringify(cartList));
+    }
+  }, [cartList]);
 
   const addCartItem = (product) => {
     const isProductIncludes = cartList.some((each) => each.id === product.id);
@@ -76,6 +90,8 @@ const App = () => {
         <Route path="/brands" element={<Brands />} />
         <Route path="/brands/:id" element={<ProductItem />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/bad-path" element={<BadPath />} />
+        <Route path="/*" element={<Navigate to="/bad-path" />} />
       </Routes>
     </productCartContext.Provider>
   );

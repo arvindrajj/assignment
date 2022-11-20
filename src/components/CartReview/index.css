@@ -4,7 +4,7 @@
   min-height: 75vh;
 }
 
-@media screen and (min-width: 768px) {
+@media all and (min-width: 768px) {
   .cart-container {
     min-height: 90vh;
   }
@@ -16,7 +16,7 @@
   width: 90%;
 }
 
-@media screen and (min-width: 768px) {
+@media all and (min-width: 768px) {
   .cart-content-container {
     width: 80%;
     max-width: 1110px;
@@ -30,7 +30,7 @@
   font-weight: 700;
 }
 
-@media screen and (min-width: 768px) {
+@media all and (min-width: 768px) {
   .cart-heading {
     font-size: 20px;
   }
@@ -51,7 +51,7 @@
   cursor: pointer;
 }
 
-@media screen and (min-width: 768px) {
+@media all and (min-width: 768px) {
   .remove-all-btn {
     font-size: 14px;
   }
@@ -69,7 +69,7 @@
   height: 140px;
 }
 
-@media screen and (min-width: 768px) {
+@media all and (min-width: 768px) {
   .cart-empty-img {
     width: 260px;
     height: 280px;
@@ -83,7 +83,7 @@
   font-weight: 500;
 }
 
-@media screen and (min-width: 768px) {
+@media all and (min-width: 768px) {
   .cart-empty-heading {
     font-size: 22px;
   }
@@ -96,7 +96,8 @@
   font-size: 12px;
   border-radius: 8px;
   border: none;
-  height: 37px;
+  max-height: 30px;
+  min-height: 27px;
   width: 89px;
   outline: none;
   cursor: pointer;

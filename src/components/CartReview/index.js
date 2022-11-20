@@ -3,6 +3,8 @@ import { useDetails } from "../../context/productContext";
 import { CartEl, ContentCont } from "./styledComponent";
 import { Link } from "react-router-dom";
 import CartItem from "../CartItem";
+import UserCheckout from "../UserCheckout";
+
 import "./index.css";
 const Cart = () => {
   const data = useDetails();
@@ -43,6 +45,7 @@ const Cart = () => {
                     <CartItem key={each.id} cartItemDetails={each} />
                   ))}
                 </ul>
+                {<UserCheckout />}
               </div>
             )}
           </div>
