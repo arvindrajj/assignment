@@ -1,13 +1,22 @@
 import styled from "styled-components";
 
-export const HomeEl = styled.div`
+export const LoaderContainer = styled.div`
   display: flex;
-  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const BrandsEl = styled.div`
   min-height: 90vh;
   height: auto;
+  width: 100vw;
+  top: 15vh;
+  position: relative;
 `;
 
 export const ContentEl = styled.div`
-  display: flex;
-  flex-direction: column;
+  margin: auto;
+  width: 80%;
 `;

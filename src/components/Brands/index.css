@@ -1,0 +1,129 @@
+.failure-view-container {
+  height: 90vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  width: 100%;
+}
+.failure-view-image {
+  height: 100%;
+  max-height: 180px;
+  width: 100%;
+  max-width: 360px;
+}
+.failure-view-heading {
+  font-family: Roboto;
+  font-size: 32px;
+  color: #262626;
+}
+.failure-view-button {
+  height: 30px;
+  width: 100px;
+  background: #4094ef;
+  border-radius: 12px;
+  color: #ffffff;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+@media all and (max-width: 768px) {
+  .failure-view-image {
+    max-height: 200px;
+    max-width: 240px;
+    height: 100%;
+    width: 100%;
+  }
+  .failure-view-heading {
+    font-size: 20px;
+  }
+}
+
+@media all and (max-width: 490px) {
+  .failure-view-heading {
+    font-size: 16px;
+  }
+  .failure-view-button {
+    height: 32px;
+    width: 102px;
+    border-radius: 8px;
+    font-size: 12px;
+  }
+  .failure-view-image {
+    height: 100%;
+    width: 100%;
+    max-height: 146px;
+    max-width: 289px;
+  }
+}
+
+.brands-heading {
+  color: #262626;
+  font-size: 28px;
+  font-family: "Roboto";
+}
+.brands-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding-left: 0px;
+  margin-top: 0px;
+}
+.brands-item {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  list-style-type: none;
+  width: 50%;
+  text-decoration: none;
+}
+@media all and (min-width: 1200px) {
+  .brands-item {
+    width: 230px;
+  }
+}
+@media all and (min-width: 556px) {
+  .brands-item {
+    width: 33%;
+  }
+}
+
+.brands-image {
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.brands-name {
+  color: #171f46;
+  font-size: 19px;
+  font-family: "Roboto";
+}
+.product-count {
+  color: #171f46;
+  font-size: 15px;
+  min-width: 104px;
+  font-family: "Roboto";
+}
+@media all and (min-width: 556px) {
+  .brands-item {
+    width: 33%;
+  }
+  .brands-image {
+    height: 40px;
+    width: 40px;
+  }
+  .brands-name {
+    font-size: 18px;
+  }
+}
+@media all and (min-width: 788px) {
+  .brands-image {
+    height: 70px;
+    width: 70px;
+    margin-bottom: 14px;
+  }
+  .brands-name {
+    font-size: 20px;
+  }
+}

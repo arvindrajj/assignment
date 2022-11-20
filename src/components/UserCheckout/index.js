@@ -1,22 +1,15 @@
-import { Component } from "react";
+import { HomeEl, ContentEl } from "./styledComponents";
 
-class Home extends Component {
-  state = {
-    searhInput: "",
-  };
-
-  onChangeInput = (e) => {
-    this.setState({ searchInput: e.target.value });
-  };
-
-  render() {
-    const { searchInput } = this.state;
-    return (
-      <>
-        <input type="text" value={searchInput} onChange={this.onChangeInput} />
-        <p>{searchInput}</p>
-      </>
-    );
+const Home = () => {
+  const msg = 'hello arvind'
+  return () => {
+    <>
+      <HomeEl>
+        <ContentEl>
+          <h1>{msg}</h1>
+        </ContentEl>
+      </HomeEl>
+    </>
   }
 }
-export default Home;
+export default Home
